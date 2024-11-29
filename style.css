@@ -13,18 +13,18 @@
 }
 #pdf-container {
   width: 100%;
-  height: 100vh;
+  height: 91vh;
   max-height: -webkit-fill-available;
   overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 0.5vh 0 5vh 0;
+  padding: 0.5vh 0;
 }
 #pdf-container canvas {
   max-width: 97vw;
-  background-color: #000;
+  background-color: #fff;
   opacity: 0.5;
   height: 250vh;
 }
