@@ -10,7 +10,6 @@
   bottom: 0;
   z-index: 99;
   background: linear-gradient(180deg, rgba(209,0,255,1) 0%, rgba(255,205,0,1) 100%);
-  max-height: -webkit-fill-available;
 }
 #pdf-container {
   width: 100%;
@@ -27,6 +26,7 @@
   max-width: 97vw;
   background-color: #fff;
   opacity: 0.5;
+  height: 250vh;
 }
 
 .link-wrapper {
@@ -36,7 +36,7 @@
   transform: translateX(-50%);
   z-index: 999;
   display: block;
-  padding: 4.5vh 0;
+  padding: 3.5vh 0;
 }
 .link {
   padding: 7px 15px;
