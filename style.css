@@ -20,11 +20,11 @@
   flex-direction: column;
   align-items: center;
   gap: 15px;
-  padding: 0.5vh 0;
+  padding: 0.5vh 0 5vh 0;
 }
 #pdf-container canvas {
   max-width: 97vw;
-  background-color: #fff;
+  background-color: #000;
   opacity: 0.5;
   height: 250vh;
 }
