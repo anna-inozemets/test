@@ -22,7 +22,7 @@
     function setViewportHeight() {
       const viewportHeight = window.innerHeight;
       console.log(viewportHeight);
-      document.documentElement.style.setProperty('--vh', `${viewportHeight * 0.01}px`);
+      document.querySelector('.pdf-container-wrapper').style.setProperty('--vh', `${viewportHeight * 0.01}px`);
     }
 
     // Установить значение при загрузке страницы

@@ -23,7 +23,7 @@
 }
 #pdf-container canvas {
   max-width: 97vw;
-  background-color: purple;
+  background-color: red;
   opacity: 0.5;
   height: 250vh;
 }
@@ -35,7 +35,7 @@
   transform: translateX(-50%);
   z-index: 999;
   display: block;
-  padding: 3.5vh 0;
+  padding: 3.9vh 0;
 }
 .link {
   padding: 7px 15px;
