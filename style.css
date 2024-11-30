@@ -23,7 +23,7 @@
 }
 #pdf-container canvas {
   max-width: 97vw;
-  background-color: red;
+  background-color: #fff;
   opacity: 0.5;
   height: 250vh;
 }
