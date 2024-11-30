@@ -18,5 +18,18 @@
     <div id="pdf-container"><canvas class="canvas-pdf-page" height="3112" width="1133"></canvas></div>
   </div>
 
+  <script>
+    function setViewportHeight() {
+      const viewportHeight = window.innerHeight;
+      console.log(viewportHeight);
+      document.documentElement.style.setProperty('--vh', `${viewportHeight * 0.01}px`);
+    }
+
+    // Установить значение при загрузке страницы
+    setViewportHeight();
+
+    // Обновлять значение при изменении размеров окна
+    window.addEventListener('resize', setViewportHeight);
+  </script>
 </body>
 </html>
