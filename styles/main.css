@@ -73,7 +73,6 @@
 
 html, body {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -132,6 +131,7 @@ h1, h2 {
 }
 section {
   padding: 4vw 0;
+  overflow: hidden;
 }
 
 h2 {
@@ -230,7 +230,7 @@ header {
   left: 0;
   right: 0;
   background-color: var(--white-c);
-  z-index: 2;
+  z-index: 3;
 }
 .header--mobile {
   display: none;
