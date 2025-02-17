@@ -159,6 +159,8 @@ h2 {
   position: absolute;
   top: 50%;
   width: 4vw;
+  max-width: 60px;
+  min-width: 20px;
   aspect-ratio: 1 / 1;
   background-image: url(../images/slick-arrow.svg);
   background-position: center;
@@ -197,6 +199,8 @@ h2 {
 .slick-slider ul.slick-dots li {
   padding: 0;
   width: 1.6vw;
+  max-width: 15px;
+  min-width: 7px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   border: solid 2px #8FC4FF;
@@ -238,25 +242,29 @@ header {
 .header .logo {
   padding: 0;
   height: 4.2vw;
+  max-height: 80px;
   width: max-content;
+  max-width: max-content;
   aspect-ratio: 1 / 1;
 }
 .header .logo img {
   width: max-content;
+  max-width: max-content;
+  height: 100%;
 }
 .header nav {
   transform: translateX(4%);
 }
 .header nav ul {
-  gap: 1.8vw;
+  gap: clamp(0.1px, 1.8vw, 45px);
 }
 .header a {
   padding: 0.3vw 0;
-  font-size: 1.2vw;
+  font-size: clamp(9px, 1.2vw, 22px)
 }
 .header a.phone {
-  padding: 0.72vw 1.2vw;
-  border-radius: 0.9vw;
+  padding: clamp(5px, 0.72vw, 15px) clamp(7px, 1.2vw, 25px);
+  border-radius: clamp(7px, 0.9vw, 15px);
   background: linear-gradient(90deg, rgba(106,161,255,1) 0%, rgba(141,183,255,1) 100%);
   color: var(--white-c);
 }
@@ -286,24 +294,25 @@ header {
 }
 .sec1__img {
   width: 42vw;
+  max-width: 575px;
 }
 .sec1__text {
-  padding: 3.5vw 0 3.5vw 3.5vw;
+  padding: clamp(5px, 3.3vw, 65px) 0 clamp(5px, 3.3vw, 65px) clamp(5px, 3.3vw, 65px);
   color: var(--white-c);
 }
 .sec1__text h1 {
-  font-size: 5.8vw;
-  line-height: 6.2vw;
-  width: 45vw;
+  font-size: clamp(20px, 5.8vw, 85px);
+  line-height: clamp(24px, 6.2vw, 89px);
+  width: clamp(0.1px, 45vw, 720px);
   text-transform: uppercase;
 }
 .sec1__text ul {
-  margin: 3.3vw 0 4.7vw;
+  margin: clamp(5px, 3.3vw, 35px) 0 clamp(5px, 4.7vw, 45px);
 }
 .sec1__text ul li {
   position: relative;
-  padding-left: 2.2vw;
-  font-size: 2.1vw;
+  padding-left: clamp(0.1px, 2.2vw, 35px);
+  font-size: clamp(11px, 2.1vw, 20px);
   margin-bottom: 1.2vw;
 }
 .sec1__text ul li::before {
@@ -313,6 +322,7 @@ header {
   transform: translateY(-50%);
   left: 0;
   width: 1.1vw;
+  max-width: 18px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background-color: var(--white-c);
@@ -321,8 +331,8 @@ header {
   margin-bottom: 0;
 }
 .sec1__text a {
-  padding: 2vw;
-  font-size: 2.1vw;
+  font-size: clamp(12px, 2.1vw, 28px);
+  padding: clamp(5px, 2vw, 25px) clamp(7px, 2.2vw, 20px);
 }
 /*#endregion sec1*/
 
@@ -338,12 +348,13 @@ header {
 }
 .sec2__block img {
   width: 12vw;
+  max-width: 150px;
   margin: 0 auto 1vw;
 }
 .sec2__block p {
   text-align: center;
-  font-size: 1.62vw;
-  line-height: 2vw;
+  font-size: clamp(10px, 1.62vw, 21px);
+  line-height: clamp(12px, 1.9vw, 23px);
 }
 /*#endregion sec2*/
 
@@ -361,6 +372,7 @@ header {
 }
 .sec3__img {
   width: 31vw;
+  max-width: 525px;
 }
 .sec3__img img.mobile {
   display: none;
@@ -383,22 +395,22 @@ header {
 }
 .sec3__form form label span {
   display: block;
-  font-size: 1.62vw;
-  line-height: 2vw;
+  font-size: clamp(11px, 1.62vw, 20px);
+  line-height: clamp(13px, 1.9vw, 22px);
   margin-bottom: 0.5vw;
 }
 .sec3__form form label input {
   display: block;
   width: 31.5vw;
-  font-size: 1.62vw;
-  line-height: 2vw;
+  font-size: clamp(11px, 1.62vw, 18px);
+  line-height: clamp(13px, 1.9vw, 20px);
   font-family: inherit;
   border-radius: 0.9vw;
   padding: 1.2vw 1vw;
 }
 .sec3__form form button {
-  padding: 1.7vw 2vw;
-  font-size: 2.1vw;
+  font-size: clamp(12px, 2.1vw, 28px);
+  padding: clamp(5px, 2vw, 25px) clamp(7px, 2.2vw, 20px);
 }
 /*#endregion sec3*/
 
@@ -406,7 +418,7 @@ header {
 .sec4__blocks {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 25vw 23.5vw;
+  grid-template-rows: 0.5fr 0.53fr;
   gap: 1.5vw;
 }
 .sec4__block {
@@ -415,17 +427,17 @@ header {
   border-radius: 1.8vw;
 }
 .sec4__text {
-  padding: 2.5vw;
+  padding: clamp(15px, 2.5vw, 35px);
 }
 .sec4__text h3 {
   font-weight: 700;
-  font-size: 1.6vw;
-  line-height: 2vw;
-  margin-bottom: 1.7vw;
+  font-size: clamp(11px, 1.6vw, 18px);
+  line-height: clamp(13px, 2vw, 20px);;
+  margin-bottom: clamp(5px, 1.5vw, 15px);
 }
 .sec4__text p {
-  font-size: 1.3vw;
-  line-height: 1.6vw;
+  font-size: clamp(9px, 1.3vw, 16px);
+  line-height: clamp(11px, 1.6vw, 19px);
 }
 
 .sec4__block:nth-child(1) {
@@ -456,6 +468,7 @@ header {
 .sec4__block:nth-child(1) .sec4__img img {
   height: 100%;
   aspect-ratio: 1 / 0.95;
+  max-height: 315px;
 }
 
 .sec4__block:nth-child(4) .sec4__img {
@@ -473,8 +486,9 @@ header {
   margin-bottom: 1vw;
 }
 .sec5 h2 + p {
-  font-size: 2.02vw;
-  margin-bottom: 3.1vw;
+  font-size: clamp(11px, 1.5vw, 22px);
+  line-height: clamp(14px, 1.9vw, 24px);
+  margin-bottom: clamp(10px, 2.5vw, 65px);
 }
 .sec5 ul {
   display: flex;
@@ -488,8 +502,8 @@ header {
 }
 .sec5 ul li {
   position: relative;
-  font-size: 1.62vw;
-  padding-left: 2.2vw;
+  font-size: clamp(10px, 1.45vw, 18px);
+  padding-left: clamp(15px, 1.65vw, 25px);
 }
 .sec5 ul li::before {
   content: '';
@@ -497,7 +511,7 @@ header {
   left: 0;
   top: 50%;
   transform: translateY(-46.5%);
-  width: 1.65vw;
+  width: clamp(8px, 1.65vw, 17px);
   aspect-ratio: 1 / 1;
   background-image: url(../images/sec5-decorator.webp);
   background-position: left center;
@@ -506,6 +520,7 @@ header {
 }
 .sec5__slider-block img {
   width: 52vw;
+  max-width: 615px;
   margin: 0 auto;
 }
 /*#endregion sec5*/
@@ -521,9 +536,9 @@ header {
 .sec6 ul li {
   position: relative;
   width: calc(50% - 1.5vw);
-  font-size: 1.8vw;
-  line-height: 2.1vw;
-  padding-left: 6vw;
+  font-size: clamp(7px, 1.6vw, 18px);
+  line-height: clamp(9px, 1.9vw, 22px);
+  padding-left: clamp(40px, 5.5vw, 60px);
 }
 .sec6 ul li::before {
   content: '';
@@ -531,7 +546,7 @@ header {
   top: 50%;
   transform: translateY(-50%);
   left: 0;
-  width: 4vw;
+  width: clamp(25px, 4vw, 45px);
   aspect-ratio: 1 / 1;
   background-image: url(../images/sec6-cross.svg);
   background-position: left center;
@@ -540,20 +555,21 @@ header {
 }
 .sec6 h3 {
   font-family: 'Bebas Neue Cyrillic', 'sans-serif';
-  font-size: 3.5vw;
-  margin-bottom: 1.2vw;
+  font-size: clamp(18px, 3.1vw, 54px);
+  margin-bottom: clamp(5px, 1.2vw, 15px);
 }
 .sec6 h3 strong {
   font-weight: 400;
   color: var(--light-blue-c);
 }
 .sec6 p {
-  font-size: 1.8vw;
-  margin-bottom: 2.7vw;
+  font-size: clamp(11px, 1.5vw, 22px);
+  line-height: clamp(14px, 1.9vw, 24px);
+  margin-bottom: clamp(15px, 2.5vw, 65px);
 }
 .sec6 a {
-  padding: 1.8vw 2vw;
-  font-size: 2.1vw;
+  font-size: clamp(12px, 2.1vw, 28px);
+  padding: clamp(5px, 2vw, 25px) clamp(7px, 2.2vw, 20px);
 }
 /*#endregion sec6*/
 
@@ -576,7 +592,7 @@ header {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: clamp(15px, 3vw, 40px);
-  width: clamp(150px, 67vw, 1880px);
+  width: clamp(150px, 67vw, 1380px);
 }
 .sec7__block {
   padding: clamp(15px, 3vw, 40px) clamp(10px, 2vw, 30px);
@@ -634,16 +650,16 @@ header {
   position: absolute;
   bottom: clamp(-45px, -3.5vw, -65px);
   right: 0;
-  width: clamp(250px, 32vw, 575px);
+  width: clamp(250px, 32vw, 535px);
   z-index: 1;
 }
 .sec7 .container::before {
   content: '';
   position: absolute;
-  bottom: 8.7vw;
-  right: 28vw;
-  height: 20vw;
-  width: 42vw;
+  bottom: clamp(0.1px, 8.7vw, 125px);
+  right: clamp(0.1px, 25vw, 415px);
+  height: clamp(125px, 20vw, 270px);
+  width: clamp(250px, 42vw, 555px);
   background-image: url(../images/sec7-decorator-img.webp);
   background-size: contain;
   background-repeat: no-repeat;
@@ -908,6 +924,7 @@ header {
   right: 0;
   height: 100%;
   width: max-content;
+  max-width: max-content;
   z-index: -1;
 }
 /*#endregion sec9*/
@@ -939,6 +956,7 @@ header {
 .sec10__card div img {
   height: 95%;
   width: max-content;
+  max-width: max-content;
 }
 .sec10__card p:nth-of-type(1) {
   font-weight: 700;
