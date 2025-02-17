@@ -102,6 +102,7 @@ button {
   background-color: transparent;
   cursor: pointer;
   border: none;
+  color: var(--dark-c);
 }
 
 input {
@@ -874,7 +875,7 @@ header {
   font-size: clamp(15px, 5.3vw, 78px);
   line-height: clamp(20px, 5.7vw, 82px);
   margin-bottom: clamp(5px, 2vw, 30px);
-  width: clamp(260px, 50vw, 700px);
+  width: clamp(250px, 50vw, 700px);
 }
 .sec9__first h2 + p {
   font-size: clamp(9.3px, 1.5vw, 26px);
@@ -1253,6 +1254,9 @@ footer {
     aspect-ratio: unset;
     height: 4.7vw;
   }
+  .header .logo img {
+    width: max-content;
+  }
   .header--mobile {
     display: flex;
     align-items: center;
@@ -1357,16 +1361,17 @@ footer {
     font-size: max(15px, 3.45vw);
   }
   .header--mobile button.burger-btn-close {
-    width: max(25px, 5.6vw);
+    width: max(33px, 5.6vw);
     border-width: 1.8px;
     margin-bottom: max(40px, 10vw);
   }
   .header--mobile button.burger-btn-open {
-    width: max(25px, 5.2vw);
-    height: max(16px, 3.5vw);
+    width: max(28px, 5.2vw);
+    height: max(18px, 3.5vw);
   }
   .header .logo {
     height: max(30px, 8vw);
+    width: max(77px, 20vw);
   }
 }
 /*#endregion adaptiveHeader*/
@@ -1803,7 +1808,7 @@ footer {
     grid-template-columns: 1fr;
   }
   .sec9__first {
-    aspect-ratio: unset;
+    aspect-ratio: 1 / 0.56;
   }
   .sec9__first img {
     transform: translateX(23%);

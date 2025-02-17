@@ -7,7 +7,7 @@ $(() => {
 
     if (target.length) {
       $("html, body").animate(
-        { scrollTop: target.offset().top - (headerHeight / 2) },
+        { scrollTop: target.offset().top - (headerHeight / 1.8) },
         600
       );
     }
