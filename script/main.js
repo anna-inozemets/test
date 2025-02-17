@@ -39,7 +39,52 @@ $(() => {
   $('.sec9__service-block:first-child').addClass('blue');
   $('.sec9__service-block:last-child h3').on('click', function() {
     $(this).next().slideToggle();
-
     $('.sec9__service-block').toggleClass('blue');
+  });
+  $('.sec10__cards').slick({
+    infinite: false,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    dots: false,
+    arrows: true,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+    ]
+  });
+
+  $('.sec11__block button').click(function() {
+    const block = $(this).closest('.sec11__block');
+    const paragraph = block.find('p');
+
+    block.toggleClass('active');
+    paragraph.slideToggle();
+  });
+
+  function updateTextBasedOnWidth() {
+    $('[data-mobile-text]').each(function() {
+      const element = $(this);
+      const mobileText = element.data('mobile-text');
+      const desktopText = element.data('desktop-text');
+
+      if ($(window).width() < 575 && mobileText) {
+        element.text(mobileText);
+      } 
+
+      else if ($(window).width() >= 575 && desktopText) {
+        element.text(desktopText);
+      }
+    });
+  }
+
+  updateTextBasedOnWidth();
+
+  $(window).resize(function() {
+    updateTextBasedOnWidth();
   });
 })
