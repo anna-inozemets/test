@@ -1062,7 +1062,7 @@ header {
 }
 .sec12__info div {
   position: relative;
-  margin-bottom: clamp(15px, 5vw, 65px);
+  margin-bottom: clamp(10px, 5vw, 65px);
   padding-left: clamp(20px, 5vw, 50px);
 }
 .sec12__info div a,
