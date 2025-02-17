@@ -1,4 +1,18 @@
 $(() => {
+  $("a[href^='#']").on("click", function (e) {
+    e.preventDefault();
+
+    let target = $($(this).attr("href"));
+    let headerHeight = $("header").outerHeight();
+
+    if (target.length) {
+      $("html, body").animate(
+        { scrollTop: target.offset().top - (headerHeight / 2) },
+        600
+      );
+    }
+  });
+
   $('#open-burger').on('click', () => {
     $('.header--mobile nav').addClass('open')
   });
