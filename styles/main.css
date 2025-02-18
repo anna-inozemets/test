@@ -246,8 +246,6 @@ header {
   padding: 0;
   height: 4.2vw;
   max-height: 80px;
-  width: max-content;
-  max-width: max-content;
   aspect-ratio: 1 / 1;
 }
 .header .logo img {
@@ -1137,9 +1135,22 @@ footer {
   padding: clamp(15px, 3.5vw, 40px) 0;
 }
 .footer__contnet .logo {
+  position: relative;
   padding: 0;
-  height: clamp(30px, 4.2vw, 70px);
+  height: clamp(35px, 4.2vw, 70px);
   width: max-content;
+}
+.footer__contnet .logo::before {
+  content: 'редукція';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-54%) translateX(calc(100% + 2vw));
+  font-size: max(13px, 3vw);
+  color: var(--white-c);
+  font-family: 'Gilroy', sans-serif;
+  text-transform: lowercase;
+  opacity: 1;
 }
 .footer__contnet .logo img {
   object-fit: contain;
@@ -1372,7 +1383,20 @@ footer {
     height: max(18px, 3.5vw);
   }
   .header .logo {
-    height: max(30px, 8vw);
+    position: relative;
+    height: max(35px, 8vw);
+  }
+  .header .logo::before {
+    content: 'редукція';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-54%) translateX(calc(100% + 2vw));
+    font-size: max(13px, 3vw);
+    color: var(--dark-c);
+    font-family: 'Gilroy', sans-serif;
+    text-transform: lowercase;
+    opacity: 0.85;
   }
 }
 /*#endregion adaptiveHeader*/
@@ -1860,7 +1884,7 @@ footer {
     row-gap: clamp(10px, 2.5vw, 20px) ;
   }
   .footer__contnet nav {
-    width: 73%;
+    width: 60%;
   }
   .footer__contnet nav ul {
     width: auto;
