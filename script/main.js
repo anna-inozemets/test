@@ -7,17 +7,24 @@ $(() => {
 
     if (target.length) {
       $("html, body").animate(
-        { scrollTop: target.offset().top - (headerHeight / 1.8) },
+        { scrollTop: target.offset().top - (headerHeight / 1.2) },
         600
       );
+    }
+
+    if ($(this).closest(".header--mobile").length) {
+      $('.header--mobile nav').removeClass('open');
+      $("body").removeClass("overflow");
     }
   });
 
   $('#open-burger').on('click', () => {
-    $('.header--mobile nav').addClass('open')
+    $('.header--mobile nav').addClass('open');
+    $('body').addClass('overflow');
   });
   $('#close-burger').on('click', () => {
-    $('.header--mobile nav').removeClass('open')
+    $('.header--mobile nav').removeClass('open');
+    $('body').removeClass('overflow');
   });
   $('.sec5__slider').slick({
     infinite: false,

@@ -81,6 +81,9 @@ body {
   font-size: 0.84vw;
   color: var(--dark-c);
 }
+body.overflow {
+  overflow: hidden;
+}
 
 ol, ul {
   list-style: none;
