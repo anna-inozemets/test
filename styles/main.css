@@ -243,6 +243,8 @@ header {
   justify-content: space-between;
 }
 .header .logo {
+  display: block;
+  max-width: max-content;
   padding: 0;
   height: 4.2vw;
   max-height: 80px;
