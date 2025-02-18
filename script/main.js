@@ -114,6 +114,6 @@ $(() => {
   $('button.accent-btn[type="submit"]').on('click', (event) => {
     event.preventDefault();
   
-    window.location.href = '/contact-form.html';
+    window.location.href = './contact-form.html';
   });
 })
