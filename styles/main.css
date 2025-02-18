@@ -254,6 +254,7 @@ header {
   width: max-content;
   max-width: max-content;
   height: 100%;
+  object-fit: contain;
 }
 .header nav {
   transform: translateX(4%);
@@ -1140,6 +1141,11 @@ footer {
   height: clamp(30px, 4.2vw, 70px);
   width: max-content;
 }
+.footer__contnet .logo img {
+  object-fit: contain;
+  width: max-content;
+  height: 100%;
+}
 .footer__contnet div {
   display: none;
 }
@@ -1251,11 +1257,7 @@ footer {
     display: none;
   }
   .header .logo {
-    aspect-ratio: unset;
     height: 4.7vw;
-  }
-  .header .logo img {
-    width: max-content;
   }
   .header--mobile {
     display: flex;
@@ -1371,7 +1373,6 @@ footer {
   }
   .header .logo {
     height: max(30px, 8vw);
-    width: max(77px, 20vw);
   }
 }
 /*#endregion adaptiveHeader*/
