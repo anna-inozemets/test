@@ -113,7 +113,16 @@ $(() => {
   //just for test
   $('button.accent-btn[type="submit"]').on('click', (event) => {
     event.preventDefault();
+
+    const isGitHubPages = window.location.hostname.includes('github.io');
+    let targetUrl;
   
-    window.location.href = './contact-form.html';
+    if (isGitHubPages) {
+      targetUrl = '/test/contact-form.html';
+    } else {
+      targetUrl = './contact-form.html';
+    }
+
+    window.location.href = targetUrl;
   });
 })
