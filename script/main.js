@@ -98,7 +98,15 @@ $(() => {
 
   updateTextBasedOnWidth();
 
-  $(window).resize(function() {
+  $(window).on('resize', () => {
     updateTextBasedOnWidth();
+  })
+
+
+  //just for test
+  $('button.accent-btn[type="submit"]').on('click', (event) => {
+    event.preventDefault();
+  
+    window.location.href = '/contact-form.html';
   });
 })
