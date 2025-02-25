@@ -27,14 +27,14 @@ $(() => {
     $('body').removeClass('overflow');
   });
   $('.sec5__slider').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
     arrows: true,
   });
   $('.sec8__blocks').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 2,
     slidesToScroll: 2,
     dots: true,
@@ -57,13 +57,26 @@ $(() => {
       img.replaceWith('<span>' + paragraphText.charAt(0).toUpperCase() + '</span>');
     }
   });
-  $('.sec9__service-block:first-child').addClass('blue');
-  $('.sec9__service-block:last-child h3').on('click', function() {
-    $(this).next().slideToggle();
-    $('.sec9__service-block').toggleClass('blue');
+  $('.sec9__service-block:last-child').on('click', function () {
+    $(this).find('h3').next().slideToggle();
   });
+
+  $('.sec9__service-block')
+    .on('mouseenter', function () { $(this).addClass('blue'); })
+    .on('mouseleave', function () { $(this).removeClass('blue'); });
+
+  $('.sec9__service-block').on('touchstart', function (event) {
+    event.stopPropagation();
+    $('.sec9__service-block').not(this).removeClass('blue');
+    $(this).addClass('blue');
+  });
+
+  $(document).on('touchstart', function () {
+    serviceBlock.removeClass('blue');
+  });
+
   $('.sec10__cards').slick({
-    infinite: false,
+    infinite: true,
     slidesToShow: 3,
     slidesToScroll: 3,
     dots: false,
