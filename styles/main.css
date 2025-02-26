@@ -1582,7 +1582,7 @@ footer {
   .sec1__text ul li {
     font-size: max(15px, 3.3vw);
     line-height: max(17px, 3.7vw);
-    width: max(115px, 27vw);
+    width: max(125px, 27vw);
     margin-bottom: 3vw;
     padding-left: max(18px, 4.5vw);
   }
