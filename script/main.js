@@ -26,6 +26,13 @@ $(() => {
     $('.header--mobile nav').removeClass('open');
     $('body').removeClass('overflow');
   });
+
+  $('.sec4__img img').each(function() {
+    if (!$(this).attr('src') || $(this).attr('src').trim() === '') {
+        $(this).css('display', 'none');
+    }
+  });
+  
   $('.sec5__slider').slick({
     infinite: true,
     slidesToShow: 1,
@@ -72,7 +79,7 @@ $(() => {
   });
 
   $(document).on('touchstart', function () {
-    serviceBlock.removeClass('blue');
+    $('.sec9__service-block').removeClass('blue');
   });
 
   $('.sec10__cards').slick({
