@@ -906,7 +906,7 @@ header {
   font-weight: 700;
   position: relative;
   top: 50%;
-  transform: translateY(-55%);
+  transform: translateY(-57.5%);
   height: max-content;
 }
 .sec9__first-text p:nth-child(3) {
