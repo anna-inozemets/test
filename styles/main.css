@@ -891,8 +891,6 @@ header {
 }
 .sec9__first-text {
   display: flex;
-  align-items: center;
-  -webkit-align-items: center;
   gap: clamp(12px, 1.6vw, 26px);
 }
 .sec9__first-text p {
@@ -905,6 +903,10 @@ header {
 .sec9__first-text p:nth-child(2) {
   font-size: clamp(12px, 2.2vw, 30px);
   font-weight: 700;
+  position: relative;
+  top: 50%;
+  transform: translateY(-55%);
+  height: max-content;
 }
 .sec9__first-text p:nth-child(3) {
   font-family: 'Bebas Neue Cyrillic', 'sans-serif';
@@ -1199,7 +1201,7 @@ footer {
 
 /*#region afterContactForm*/
 .send-contact-form {
-  padding: clamp(40px, 4vw, 90px) 0 clamp(45px, 4vw, 95px);
+  padding: clamp(40px, 4vw, 90px) 0 clamp(65px, 4vw, 95px);
   height: 100vh;
   background-image: url(../images/send-bg.png);
   background-repeat: no-repeat;
@@ -1230,7 +1232,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 6vw;
-  margin-bottom: clamp(35px, 2.5vw, 65px);
+  margin-bottom: clamp(25px, 2.5vw, 65px);
 }
 .send-contact-form .social a {
   width: clamp(25px, 3vw, 55px);
