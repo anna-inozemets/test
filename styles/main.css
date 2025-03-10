@@ -1988,7 +1988,7 @@ footer {
 }
 @media screen and (max-width: 475px) {
   .sec9__first-text p:nth-child(2) {
-    transform: translate(-50%, -58%);
+    transform: translate(-50%, -75%);
   }
 }
 /*#endregion adaptiveSec9*/
